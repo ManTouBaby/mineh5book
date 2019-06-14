@@ -1,0 +1,23 @@
+.bg-write{
+  background-color: #fff;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+
+.clearFix:before,.clearFix:after{
+  display: table;
+  content: "";
+}
+.clearFix:after{
+  clear: both;
+}
+.text-ellipsis{
+  /*实现文字过多进行缩略*/
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}

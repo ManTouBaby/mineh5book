@@ -1,0 +1,28 @@
+@font-face {font-family: "iconfont";
+  src: url('../fonts/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */ 
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pingfen:before {
+  content: "\e646";
+}
+
+.icon-remen:before {
+  content: "\e638";
+}
+
+.icon-wanjietuijian:before {
+  content: "\e6d8";
+}
+
+.icon--laobantuijian:before {
+  content: "\e604";
+}
+
