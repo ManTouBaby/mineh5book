@@ -17,13 +17,7 @@
   ],
   "plugins": [
     "transform-vue-jsx",
-    "transform-runtime",
-    [
-      "@nutui/babel-plugin-separate-import",
-      {
-        "style": "css"
-      }
-    ]
+    "transform-runtime"
   ],
   "env": {
     "test": {

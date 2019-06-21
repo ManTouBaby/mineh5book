@@ -4,18 +4,32 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-import bookCity from "@/components/bottom_menu/bookCity"
-import bookRank from "@/components/bottom_menu/bookRank"
-import bookRack from '@/components/bottom_menu/bookRack'
+import bookCity from "../components/bottom_menu/bookCity"
+import bookRank from "../components/bottom_menu/BookRank"
+import bookRack from '../components/bottom_menu/bookRack'
+import main from '../components/Main'
+import bookInfo from '../components/book_info/BookInfo'
 
 var vueRouter = new Router({
-    routes: [
-        {path: "/", redirect: "/bookRack"},
-        {path: "/bookRack", component: bookRack},
-        {path: "/bookCity", component: bookCity},
-        {path: "/bookRank", component: bookRank}
-    ],
-    linkActiveClass: "mui-active"
+  routes: [
+    {
+      path: "/", redirect: "/main"
+    },
+    {
+      path: "/main", component: main,
+      children: [
+        {path: "bookRack", component: bookRack},
+        {path: "bookCity", component: bookCity},
+        {path: "bookRank", component: bookRank},
+      ],
+      redirect:"/main/bookRack"
+    },
+    {
+      path:"/bookInfo",component:bookInfo
+    }
+
+  ],
+  linkActiveClass: "mui-active"
 })
 
 export default vueRouter

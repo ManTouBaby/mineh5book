@@ -38,14 +38,12 @@
   }
   #titleName{
     float: left;
-    padding-top: 2px;
     line-height: 32px;
     height: 32px;
     color: #333333;
   }
   #titleMore{
     float: right;
-    padding-top: 2px;
     color: #333333;
     margin-right: 12px;
   }

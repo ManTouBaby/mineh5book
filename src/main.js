@@ -6,18 +6,13 @@ import router from './router/router-index.js'
 import Axios from 'axios'
 import VueAxios from 'vue-axios'
 
-import './lib/css/mui.css'
-import './lib/css/icons-extra.css'
 import './lib/css/iconfont.css'
 import './assets/css/base.css'
 import './assets/sass/base.scss'
 
-import {Dialog, Swiper, Toast, Scroller} from '@nutui/nutui'
+import {LoadingPlugin} from 'vux'
 
-Dialog.install(Vue)
-Swiper.install(Vue)
-Toast.install(Vue)
-Scroller.install(Vue)
+Vue.use(LoadingPlugin)
 
 Vue.config.productionTip = false
 Vue.use(VueAxios, Axios)
@@ -26,8 +21,5 @@ Vue.use(VueAxios, Axios)
 new Vue({
   el: '#app',
   router,
-  components: {
-    App
-  },
-  template: '<App/>'
+  render: c => c(App)
 })
